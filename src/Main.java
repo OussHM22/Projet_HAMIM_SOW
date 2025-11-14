@@ -1,13 +1,18 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
+        World w = new World("./data/airport-codes_no_comma.csv");
+        System.out.println("Found " + w.getList().size() + " airports.");
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+        Aeroport parisNearest = w.findNearestAirport(2.316, 48.866);
+        System.out.println("Nearest to Paris = " + parisNearest);
+
+        Aeroport cdg = w.findByCode("CDG");
+        double dParisNearest = w.distance(2.316, 48.866, parisNearest.getLongitude(), parisNearest.getLatitude());
+        double dParisCDG     = w.distance(2.316, 48.866, cdg.getLongitude(), cdg.getLatitude());
+        System.out.println("Norme(Paris->Nearest) = " + dParisNearest);
+        System.out.println("CDG = " + cdg);
+        System.out.println("Norme(Paris->CDG) = " + dParisCDG);
+    }
 }
+
+
