@@ -69,4 +69,8 @@ public class Earth extends Group {
         double lon = 360.0 * (u - 0.5);
         return new double[]{lon, lat};
     }
+    public void displayYellowSphere(Aeroport a) {
+        getChildren().add(createSphere(a, Color.YELLOW));
+    }
+
 }

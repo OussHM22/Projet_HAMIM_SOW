@@ -6,10 +6,30 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/resources/textures" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/out/production/PROJET_Hamim_Sow/data" />
+      <excludeFolder url="file://$MODULE_DIR$/src/resources/data" />
       <excludeFolder url="file://$MODULE_DIR$/src/resources/textures" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="javafx" level="project" />
+    <orderEntry type="library" exported="" name="javafx" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libJson/libJson/javax.json-1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libJson/libJson/javax.json-api-1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
