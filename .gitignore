@@ -1,20 +1,9 @@
-# IntelliJ
+@"
 .idea/
-*.iml
-
-# Builds
 out/
-build/
-target/
-bin/
-
-# OS
+*.iml
+javafx-sdk*/
+# OS junk
 .DS_Store
 Thumbs.db
-
-# Logs/temp
-*.log
-*.tmp
-
-# Ne versionne pas un SDK JavaFX local posé dans le projet
-javafx-sdk*/
+"@ | Set-Content -Encoding UTF8 .gitignore
