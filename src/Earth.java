@@ -61,6 +61,9 @@ public class Earth extends Group {
     public void displayRedSphere(Aeroport a) {
         getChildren().add(createSphere(a, Color.RED));
     }
+    public void displayYellowSphere(Aeroport a) {
+        getChildren().add(createSphere(a, javafx.scene.paint.Color.YELLOW));
+    }
 
     public static double[] texToLonLat(Point2D tex) {
         double u = tex.getX();
@@ -69,8 +72,6 @@ public class Earth extends Group {
         double lon = 360.0 * (u - 0.5);
         return new double[]{lon, lat};
     }
-    public void displayYellowSphere(Aeroport a) {
-        getChildren().add(createSphere(a, Color.YELLOW));
-    }
+
 
 }
